@@ -159,7 +159,7 @@ const Login: React.FC = () => {
                 <ul className="mt-2 space-y-1">
                   <li><strong>Müşteri:</strong> client@example.com</li>
                   <li><strong>Ekip Üyesi:</strong> team@example.com</li>
-                  <li><strong>Yönetici:</strong> manager@example.com</li>
+                  <li><strong>Yönetici:</strong> manager@example.com, emirhan@agency.com</li>
                   <li><em>Tüm hesaplar için şifre: password</em></li>
                 </ul>
               </div>
