@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import './test-env'; // Çevre değişkenlerini test et
 
 console.log('Application starting...');
 

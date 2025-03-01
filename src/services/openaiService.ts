@@ -1,10 +1,18 @@
 import OpenAI from 'openai';
 import { getDataSummary, getDataTypes, getData, getSystemData } from './dataService';
 
+// API anahtarlarını doğrudan al
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY || '';
+const orgId = import.meta.env.VITE_OPENAI_ORG_ID || '';
+
+console.log('OpenAI servis başlatılıyor...');
+console.log('API Key mevcut mu:', !!apiKey);
+console.log('Organization ID mevcut mu:', !!orgId);
+
 // OpenAI istemcisini oluştur
 const openai = new OpenAI({
-  apiKey: import.meta.env.VITE_OPENAI_API_KEY || '',
-  organization: import.meta.env.VITE_OPENAI_ORG_ID || '',
+  apiKey: apiKey,
+  organization: orgId,
   dangerouslyAllowBrowser: true // Tarayıcıda çalışmasına izin ver (geliştirme ortamı için)
 });
 
@@ -116,10 +124,17 @@ const processUserQuery = (query: string): string | null => {
 // ChatGPT ile mesajlaşma fonksiyonu
 export const chatWithGPT = async (messages: Array<{ role: 'user' | 'assistant' | 'system', content: string }>) => {
   try {
+    // API anahtarı kontrolü ve debug
+    const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+    const orgId = import.meta.env.VITE_OPENAI_ORG_ID;
+    
+    console.log('API Key mevcut mu:', !!apiKey);
+    console.log('Organization ID mevcut mu:', !!orgId);
+    
     // API anahtarı yoksa hata fırlat
-    if (!import.meta.env.VITE_OPENAI_API_KEY) {
+    if (!apiKey) {
       console.warn('OpenAI API anahtarı bulunamadı');
-      return 'AI yanıtı alınamadı. API anahtarı eksik.';
+      return 'AI yanıtı alınamadı. API anahtarı eksik. Lütfen .env dosyasını kontrol edin.';
     }
     
     // Son kullanıcı mesajını al
