@@ -157,9 +157,9 @@ const Login: React.FC = () => {
               <div className="text-sm text-center text-gray-600 dark:text-gray-400">
                 <p>Farklı rolleri keşfetmek için bu demo hesaplarını kullanın:</p>
                 <ul className="mt-2 space-y-1">
-                  <li><strong>Müşteri:</strong> client@example.com</li>
-                  <li><strong>Ekip Üyesi:</strong> team@example.com</li>
-                  <li><strong>Yönetici:</strong> manager@example.com, emirhan@agency.com</li>
+                  <li><strong>Müşteri:</strong> afirmasi@example.com, bfirmasi@example.com</li>
+                  <li><strong>Ekip Üyesi:</strong> zeynep@agency.com, ahmet@agency.com, elif@agency.com</li>
+                  <li><strong>Yönetici:</strong> emirhan@agency.com</li>
                   <li><em>Tüm hesaplar için şifre: password</em></li>
                 </ul>
               </div>
