@@ -43,4 +43,4 @@ npm run dev
 - **Ekip Üyesi**: zeynep@agency.com, ahmet@agency.com, elif@agency.com
 - **Yönetici**: emirhan@agency.com
 
-Tüm hesaplar için şifre: `password` 
+Tüm hesaplar için şifre: `password`
